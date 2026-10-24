@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="SmallProjector" or defName="LargeProjector" or defName="GrandProjector"][not(comps)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="SmallProjector" or defName="LargeProjector" or defName="GrandProjector"][not(comps)]</xpath>
+      <value>
+        <comps />
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="SmallProjector" or defName="LargeProjector" or defName="GrandProjector"]/comps[not(li[@Class="CompProperties_Styleable"])]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="SmallProjector" or defName="LargeProjector" or defName="GrandProjector"]/comps[not(li[@Class="CompProperties_Styleable"])]</xpath>
+      <value>
+        <li Class="CompProperties_Styleable" />
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="SmallProjector" or defName="LargeProjector" or defName="GrandProjector"][not(ideoBuildingNamerBase)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="SmallProjector" or defName="LargeProjector" or defName="GrandProjector"][not(ideoBuildingNamerBase)]</xpath>
+      <value>
+        <ideoBuildingNamerBase>Compat17_NamerProjector</ideoBuildingNamerBase>
+      </value>
+    </match>
+  </Operation>
+</Patch>

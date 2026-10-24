@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>EvilEyeGuy.Compat17Fixes</packageId>
+  <name>1.7 Compatibility Fixes</name>
+  <author>EvilEyeGuy</author>
+  <supportedVersions>
+    <li>1.7</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <loadBefore>
+    <li>spdskatr.projectrimfactory</li>
+    <li>XMB.Giantimperialcannonturret.MO</li>
+    <li>Grimworld.Framework</li>
+  </loadBefore>
+  <description>Fixes for 1.6 mods that break under RimWorld 1.7. The original mods stay untouched.
+
+Project RimFactory: the storage gizmo patch left an extra value on the stack. Harmony under 1.7 rejects that, which stopped all later RimFactory patches.
+Giant imperial turret: the projectile offset patch could not find its spot and failed to load.
+GrimWorld 40,000 Framework: the armor mask shader has no Vulkan variant in the 1.6 bundle. The fix takes it from the mod's own 1.5 Linux bundle.
+Holograms and Projectors: the projectors get the style comp and the name rules that Ideology expects.
+World generation: a faction ideoligion that ends up without a structure meme gets one instead of breaking world generation. The log names the faction.
+Items named during world generation, before the player faction exists, no longer log a faction relation error.</description>
+</ModMetaData>

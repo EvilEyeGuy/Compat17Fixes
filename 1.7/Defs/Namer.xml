@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>Compat17_NamerProjector</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>buildingName->projector</li>
+        <li>buildingName->hologram</li>
+        <li>buildingName->light show</li>
+        <li>buildingName->vision</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>
