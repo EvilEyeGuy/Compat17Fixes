@@ -3,5 +3,6 @@
   <v1.7>
     <li>/</li>
     <li>1.7</li>
+    <li IfModNotActive="SM.MedievalRepair">1.7/MittelalterBau</li>
   </v1.7>
 </loadFolders>

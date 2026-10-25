@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/EffecterDef[defName="ConstructMetal" or defName="Repair"]/children/li[subEffecterClass="SubEffecter_Sustainer"]/soundDef</xpath>
+    <value>
+      <soundDef>C17_MittelalterBau</soundDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/EffecterDef[defName="ConstructMetal"]/children/li[subEffecterClass="SubEffecter_Sustainer"]/ticksBeforeSustainerStart</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/EffecterDef[defName="ConstructMetal"]/children/li[subEffecterClass="SubEffecter_Sustainer"]</xpath>
+      <value>
+        <ticksBeforeSustainerStart>35</ticksBeforeSustainerStart>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/EffecterDef[defName="ConstructMetal" or defName="Repair"]/children/li[fleckDef="SparkFlash" or moteDef="Mote_SparkThrown"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/EffecterDef[defName="ConstructMetal" or defName="Repair"]/children</xpath>
+    <value>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>C17_MittelalterBau_Hammer</fleckDef>
+        <spawnLocType>BetweenTouchingCells</spawnLocType>
+        <positionLerpFactor>0.53</positionLerpFactor>
+        <chancePerTick>0.002</chancePerTick>
+        <airTime>1.25~1.5</airTime>
+        <angle>15~75</angle>
+        <rotationRate>15~75</rotationRate>
+        <scale>1.1~1.3</scale>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <moteDef>C17_MittelalterBau_Holz</moteDef>
+        <spawnLocType>BetweenTouchingCells</spawnLocType>
+        <positionLerpFactor>0.49</positionLerpFactor>
+        <chancePerTick>0.02</chancePerTick>
+        <scale>0.32~0.46</scale>
+        <airTime>0.08~0.16</airTime>
+        <rotationRate>-240~240</rotationRate>
+        <speed>3.2~6.3</speed>
+        <angle>135~225</angle>
+        <positionRadius>0.02</positionRadius>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <moteDef>C17_MittelalterBau_Stein</moteDef>
+        <spawnLocType>BetweenTouchingCells</spawnLocType>
+        <positionLerpFactor>0.49</positionLerpFactor>
+        <chancePerTick>0.02</chancePerTick>
+        <scale>0.36~0.58</scale>
+        <airTime>0.08~0.16</airTime>
+        <rotationRate>-240~240</rotationRate>
+        <speed>2.8~5.6</speed>
+        <angle>135~225</angle>
+        <positionRadius>0.03</positionRadius>
+      </li>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef>
+    <defName>C17_MittelalterBau_Start</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>C17_MittelalterBau/Start</clipPath>
+          </li>
+        </grains>
+        <volumeRange>19.3~23.6</volumeRange>
+        <pitchRange>0.82~1.15</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>C17_MittelalterBau</defName>
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStartSound>C17_MittelalterBau_Start</sustainStartSound>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>C17_MittelalterBau/Loop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>28.1~28.2</volumeRange>
+        <pitchRange>0.83~1.17</pitchRange>
+        <sustainLoopDurationRange>1.18~4.19</sustainLoopDurationRange>
+        <sustainIntervalRange>-0.33~-0.33</sustainIntervalRange>
+        <sustainAttack>0.06</sustainAttack>
+        <sustainRelease>0.48</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>C17_MittelalterBau_Hammer</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.05</fadeInTime>
+    <solidTime>1.25</solidTime>
+    <fadeOutTime>0.20</fadeOutTime>
+    <graphicData>
+      <texPath>C17_MittelalterBau/Hammer</texPath>
+    </graphicData>
+  </FleckDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>C17_MittelalterBau_Holz</defName>
+    <graphicData>
+      <texPath>C17_MittelalterBau/Holz</texPath>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <mote>
+      <fadeInTime>0.05</fadeInTime>
+      <solidTime>1.2</solidTime>
+      <fadeOutTime>0.15</fadeOutTime>
+      <collide>true</collide>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>C17_MittelalterBau_Stein</defName>
+    <graphicData>
+      <texPath>C17_MittelalterBau/Stein</texPath>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <mote>
+      <fadeInTime>0.05</fadeInTime>
+      <solidTime>1.6</solidTime>
+      <fadeOutTime>0.15</fadeOutTime>
+      <collide>true</collide>
+    </mote>
+  </ThingDef>
+</Defs>
